@@ -165,7 +165,6 @@ int time_t_to_jalali_part(text* units, pg_time_t* t) {
       result = (&jdatetime)->tm_year;
       break;
     case DTK_DOW:
-      result = tm->tm_year;
       result = j2day(date2j(tm->tm_year + 1900, tm->tm_mon + 1, tm->tm_mday)) - 6;
       if (result < 0) {
         result += 7;
